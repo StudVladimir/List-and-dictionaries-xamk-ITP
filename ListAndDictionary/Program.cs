@@ -27,6 +27,7 @@
                 {
                     case "1":
                         AddPerson();
+                        option = "";
                         break;
                     case "2":
                         RemovePerson();
@@ -77,7 +78,7 @@
             // TODO 6: If they don't exist, request age input and add the person to the personAgeDictionary.
             //         NOTE!: Remember to add both TKey and TValue
             Console.WriteLine("Input the age of the person: ");
-            int age = Console.Read();
+            int age = int.Parse(Console.ReadLine());
             personAgeDictionary.Add(name, age);
             // TODO 7: Provide user feedback for successful addition or if the person already exists in personAgeDictionary.
             if (personAgeDictionary.ContainsKey(name)&& personAgeDictionary.ContainsValue(age))
